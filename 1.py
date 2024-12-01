@@ -12,7 +12,8 @@ lst = []
 
 
 try:
-    lst = list(map(int, input("Введите 10 целых положительных чисел через пробел: ").split(' ')))
+    lst = list(map(int, input("Введите 10 целых положительных чисел через пробел: ").strip().split(' ')))
+
     if all(lst) <= 0 or len(lst) != 10:
         print('Ошибка ввода!')       
     else:
