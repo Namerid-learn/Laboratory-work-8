@@ -4,18 +4,21 @@ def equal(n, s):
     else:
         return equal(n // 10, s - n % 10)
 
-try:    
-    n = int(input("Введите n: "))
-    s = int(input("Введите s: "))
+def main():
+    try:    
+        n = int(input("Введите n: "))
+        s = int(input("Введите s: "))
 
-    if n < 0 or s < 0:
-        print ("Ошибка ввода!")
-    else:
-        if equal(n, s) == True:
-            print ("Истина")
+        if n < 0 or s < 0:
+            print ("Ошибка ввода!")
         else:
-            print ("Ложь")
-            
-except ValueError:
-    print ("Ошибка ввода!")
-    
+            if equal(n, s) == True:
+                print ("Истина")
+            else:
+                print ("Ложь")
+                
+    except ValueError:
+        print ("Ошибка ввода!")
+        
+#main
+main()
